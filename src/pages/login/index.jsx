@@ -2,7 +2,6 @@ import { StyledLogin } from "./styles";
 import { Link } from "react-router-dom";
 import { FormLogin } from "../../components/Form/FormLogin";
 import { Button } from "../../components/Button";
-import { AnimSlideRight, AnimZoom } from "../../components/Animation";
 import { useContext } from "react";
 import { ClientContext } from "../../context/ClientContext";
 
@@ -17,15 +16,7 @@ export const LoginPage = () => {
   }
   return (
     <StyledLogin>
-      {/* <div> */}
-      {/* <AnimSlideRight delay={0}>
-          <nav>
-            <img src={logo} alt="logotipo Kenzie Hub" />
-          </nav>
-        </AnimSlideRight> */}
-      {/* <AnimZoom> */}
       <main className="container">
-        {/* <section>Contacts Manager</section> */}
         <section>
           <div>
             <FormLogin />
@@ -44,8 +35,6 @@ export const LoginPage = () => {
           </div>
         </section>
       </main>
-      {/* </AnimZoom> */}
-      {/* </div> */}
     </StyledLogin>
   );
 };

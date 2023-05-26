@@ -40,6 +40,7 @@ export const StyledRegister = styled.div`
 
     main {
       overflow-x: hidden;
+      margin-top: 20px;
     }
   }
 `;

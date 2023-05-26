@@ -34,6 +34,19 @@ export const StyledGlobals = createGlobalStyle`
     margin: 0 auto;
   }
 
+  .rotate{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    opacity: 0.7;
+    img{
+      width: 100vw;
+
+    }
+  }
+
 
   /* -------- LOADER BOTÕES -------- */
   .loader {
