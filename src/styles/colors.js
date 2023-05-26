@@ -3,8 +3,8 @@ import { createGlobalStyle } from "styled-components";
 export const StyledColors = createGlobalStyle`
     :root {
         --color-primary: #046648;
-        --color-secondary: #82a088;
-        --color-primary-disable: #59323F;
+        --color-secondary: #216651;
+        --color-primary-disable: #113228;
 
         --color-gray-0: #F8F9FA;
         --color-gray-1: #868E96;

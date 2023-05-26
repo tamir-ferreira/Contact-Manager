@@ -19,49 +19,49 @@ export const StyledTypography = createGlobalStyle`
       --font-size-3: 14px;
       --font-size-4: 12px;
 
-      --font-weigth-1: 700;
-      --font-weigth-2: 400;
+      --font-weight-1: 700;
+      --font-weight-2: 400;
     }
 
   .font-title-1 {
     font-size: var(--font-size-1);
-    font-weight: var(--font-weigth-1);
+    font-weight: var(--font-weight-1);
   }
 
   .font-title-2 {
     font-size: var(--font-size-2);
-    font-weight: var(--font-weigth-1);
+    font-weight: var(--font-weight-1);
   }
 
   .font-title-2-regular {
     font-size: var(--font-size-2);
-    font-weight: var(--font-weigth-2);
+    font-weight: var(--font-weight-2);
   }
   
   .font-title-3 {
     font-size: var(--font-size-3);
-    font-weight: var(--font-weigth-1);
+    font-weight: var(--font-weight-1);
   }
 
   .font-headline {
     font-size: var(--font-size-4);
-    font-weight: var(--font-weigth-2);
+    font-weight: var(--font-weight-2);
   }
 
   .font-headline-gray {
     font-size: var(--font-size-4);
-    font-weight: var(--font-weigth-2);
+    font-weight: var(--font-weight-2);
     color: var(--color-gray-1);
   }
   
   .font-headline-bold {
     font-size: var(--font-size-4);
-    font-weight: var(--font-weigth-1);
+    font-weight: var(--font-weight-1);
   }
   
   .font-headline-italic {
     font-size: var(--font-size-4);
-    font-weight: var(--font-weigth-2);
+    font-weight: var(--font-weight-2);
     font-style: italic;
   }
 `;

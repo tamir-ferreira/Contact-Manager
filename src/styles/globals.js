@@ -14,12 +14,8 @@ export const StyledGlobals = createGlobalStyle`
   }
 
   body {
-    /* background: var(--color-gray-4); */
-   
     background-image: url(${bg});
     background-size: fill;
-    /* background-repeat: round; */
-
     max-width: 100vw;
     overflow-x: hidden;
   }
