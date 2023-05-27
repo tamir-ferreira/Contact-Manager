@@ -8,6 +8,7 @@ import { AnimSlideUp } from "../Animation";
 import { Button } from "../Button";
 import { Input } from "../Input";
 import { StyledModal } from "./styles";
+import { Modal as iModal } from "../../interfaces";
 
 export const Modal = () => {
   const { loading, loading2 } = useContext(ClientContext);
@@ -26,19 +27,21 @@ export const Modal = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<iModal>({
     mode: "onChange",
     resolver: yupResolver(modalAdd ? modalSchemaCreate : modalSchemaUpdate),
   });
 
   return (
     <StyledModal>
-      <AnimSlideUp>
+      <AnimSlideUp delay={0}>
         <div>
           <h4 className="font-title-3">
-            {modalAdd ? "Cadastrar Contato" : "Editar Contato"}
+            {modalAdd ? "Cadastrar Contato" : "Editar / Excluir Contato"}
           </h4>
-          <Button onClick={() => setModalOpen(false)}>X</Button>
+          <Button onClick={() => setModalOpen(false)} model={""} color={""}>
+            X
+          </Button>
         </div>
         <form
           onSubmit={handleSubmit(
@@ -71,8 +74,7 @@ export const Modal = () => {
           />
           {modalAdd ? (
             <Button
-              type="submit"
-              size="default"
+              model="default"
               color={!loading ? "colored" : "disabled"}
               children={
                 !loading ? (
@@ -85,9 +87,8 @@ export const Modal = () => {
           ) : (
             <div>
               <Button
-                type="submit"
-                size="fixed_default"
-                color={!loading ? "colored" : "disabled"}
+                model="fixed_default"
+                color={!loading ? "gray" : "disabled"}
                 children={
                   !loading ? (
                     "Salvar alterações"
@@ -97,9 +98,8 @@ export const Modal = () => {
                 }
               />
               <Button
-                type="button"
-                size="fixed_little"
-                color={!loading2 ? "gray" : "disabled_gray"}
+                model="fixed_little"
+                color={!loading2 ? "colored" : "disabled_gray"}
                 children={
                   !loading2 ? "Excluir" : <span className="loader"></span>
                 }

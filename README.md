@@ -12,9 +12,9 @@
 ## 1. Visão Geral
 
 A aplicação é uma agenda de contatos com cadastro de usuários, que acessa uma API própria, onde os usuários conseguem cadastrar contatos com telefone e e-mail.
-Além de listar, editar e deletar seus contatos.
+Além de listar, editar e deletar seus contatos cadastrados.
 
-A Aplicação foi construída com React.js no Node.js e para a estilização foi utilizada a biblioteca Styled-Components.
+A Aplicação foi construída com TypeScript e React.js no Node.js e para a estilização foi utilizada a biblioteca Styled-Components.
 
 Para as validações dos campos dos formulários foi utilizada a biblioteca Yup.
 

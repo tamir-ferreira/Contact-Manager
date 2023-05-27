@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { registerSchema } from "./schemas";
 import { ClientContext } from "../../../context/ClientContext";
 import { BsEyeSlash, BsFillEyeFill } from "react-icons/bs";
+import { Client } from "../../../interfaces";
 
 export const FormRegister = () => {
   const { loading, registerSubmit, showPass, setShowPass } =
@@ -16,7 +17,7 @@ export const FormRegister = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
+  } = useForm<Client>({
     mode: "onChange",
     resolver: yupResolver(registerSchema),
   });
@@ -71,8 +72,7 @@ export const FormRegister = () => {
           error={errors.passwordConfirm?.message}
         />
         <Button
-          type="submit"
-          size="default"
+          model="default"
           color={!loading ? "colored" : "disabled"}
           children={!loading ? "Cadastrar" : <span className="loader"></span>}
         />

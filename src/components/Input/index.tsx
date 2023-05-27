@@ -1,3 +1,4 @@
+import { Input as iInput } from "../../interfaces";
 import { StyledInput } from "./styles";
 
 export const Input = ({
@@ -9,7 +10,7 @@ export const Input = ({
   children,
   register,
   error,
-}) => {
+}: iInput) => {
   return (
     <StyledInput>
       <label className="font-headline" htmlFor={register.name}>

@@ -6,7 +6,11 @@ import { StyledColors } from "./styles/colors";
 import { StyledGlobals } from "./styles/globals";
 import { StyledTypography } from "./styles/typography";
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
+
+root.render(
   <React.StrictMode>
     <Toast />
     <StyledGlobals />

@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
+import { ButtonVariants } from "../../interfaces";
 
-const buttonVariants = {
+const buttonVariants: ButtonVariants = {
   default: css`
     width: 100%;
     height: 48px;
@@ -42,6 +43,7 @@ const buttonVariants = {
     :hover {
       background-color: var(--color-primary-focus);
       border: 0.125rem solid var(--color-primary);
+      animation: none;
     }
   `,
 
@@ -78,7 +80,10 @@ const buttonVariants = {
   `,
 };
 
-export const StyledButton = styled.button`
+export const StyledButton = styled.button<{
+  model: keyof ButtonVariants;
+  color: keyof ButtonVariants;
+}>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,6 +109,6 @@ export const StyledButton = styled.button`
     }
   }
 
-  ${({ size }) => buttonVariants[size]}
+  ${({ model }) => buttonVariants[model]}
   ${({ color }) => buttonVariants[color]}
 `;

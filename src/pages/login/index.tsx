@@ -20,7 +20,7 @@ export const LoginPage = () => {
   return (
     <StyledLogin>
       {isLandscape && !isMobile ? (
-        <Rotate />
+        <Rotate width={""} />
       ) : (
         <main className="container">
           <section>
@@ -32,7 +32,7 @@ export const LoginPage = () => {
               </p>
               <Link to={"/register"}>
                 <Button
-                  size="default"
+                  model="default"
                   color="gray"
                   children="Cadastre-se"
                   onClick={() => setShowPass(false)}

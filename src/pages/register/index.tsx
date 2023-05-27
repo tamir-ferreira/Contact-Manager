@@ -12,13 +12,13 @@ export const RegisterPage = () => {
   return (
     <>
       {isLandscape && !isMobile ? (
-        <Rotate />
+        <Rotate width={""} />
       ) : (
         <StyledRegister>
           <main>
             <Link to={`/`}>
               <Button
-                size="small"
+                model="small"
                 color="gray"
                 onClick={() => setShowPass(false)}
                 children={"Voltar"}

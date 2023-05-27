@@ -17,7 +17,6 @@ export const StyledRegister = styled.div`
     padding: 70px 20px 30px 20px;
     border-radius: var(--border-radius-1);
     background: var(--color-opacity);
-    /* background-color: var(--color-gray-3); */
     color: var(--color-gray-0);
     position: relative;
 

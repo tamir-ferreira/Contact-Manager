@@ -2,11 +2,11 @@ import { useContext } from "react";
 import { ClientContext } from "../../context/ClientContext";
 import { Link } from "react-router-dom";
 import { Button } from "../Button";
+import { HeaderProps } from "../../interfaces";
 
-export const Header = ({ className, children }) => {
+export const Header = ({ className }: HeaderProps) => {
   const { client, setClient, setShowPass } = useContext(ClientContext);
   const handleLogout = () => {
-    console.log("ok");
     setClient(null);
     localStorage.removeItem("@TOKEN");
     setShowPass(false);
@@ -28,7 +28,7 @@ export const Header = ({ className, children }) => {
           )}
           <Link to={`#`}>
             <Button
-              size="small"
+              model="small"
               color="gray"
               onClick={() => handleLogout()}
               children={"Sair"}

@@ -4,12 +4,12 @@ import { StyledForm } from "../styles";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { loginSchema } from "./schemas";
-import { BsFillEyeFill } from "react-icons/bs";
-import { BsEyeSlash } from "react-icons/bs";
+import { BsFillEyeFill, BsEyeSlash } from "react-icons/bs";
 import { useContext } from "react";
 import { ClientContext } from "../../../context/ClientContext";
+import { Login } from "../../../interfaces";
 
-export const FormLogin = () => {
+export const FormLogin = (): JSX.Element => {
   const { loginSubmit, loading, showPass, setShowPass } =
     useContext(ClientContext);
 
@@ -18,7 +18,7 @@ export const FormLogin = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm({
+  } = useForm<Login>({
     mode: "onChange",
     resolver: yupResolver(loginSchema),
   });
@@ -50,12 +50,9 @@ export const FormLogin = () => {
         }
       />
 
-      <Button
-        type="submit"
-        size="default"
-        color={!loading ? "colored" : "disabled"}
-        children={!loading ? "Entrar" : <span className="loader"></span>}
-      />
+      <Button model="default" color={!loading ? "colored" : "disabled"}>
+        {!loading ? "Entrar" : <span className="loader"></span>}
+      </Button>
     </StyledForm>
   );
 };

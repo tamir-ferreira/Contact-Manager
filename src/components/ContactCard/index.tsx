@@ -3,19 +3,20 @@ import { ContactContext } from "../../context/ContactContext";
 import { ClientContext } from "../../context/ClientContext";
 import { StyledCardContact } from "./styles";
 import { format } from "date-fns";
+import { Contact } from "../../interfaces";
 
 export const ContactCard = () => {
   const { client } = useContext(ClientContext);
   const { setContactSelected, setModalAdd, setModalOpen } =
     useContext(ContactContext);
 
-  const formatDate = (dateString) => {
+  const formatDate = (dateString: string) => {
     const formattedDate = format(new Date(dateString), "dd-MM-yyyy");
     return formattedDate;
   };
   return (
     <>
-      {client.contacts.map((contact) => (
+      {client?.contacts.map((contact: Contact) => (
         <StyledCardContact
           key={contact.id}
           onClick={() => {

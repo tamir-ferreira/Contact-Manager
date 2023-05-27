@@ -1,3 +1,4 @@
+import empty from "../../images/empty.png";
 import { FaPlus } from "react-icons/fa";
 import { Button } from "../../components/Button";
 import { StyledDashboard } from "./styles";
@@ -10,13 +11,11 @@ import { ContactContext } from "../../context/ContactContext";
 import { ContactCard } from "../../components/ContactCard";
 import { AnimBlur } from "../../components/Animation";
 import { Rotate } from "../../components/Rotate";
-import empty from "../../images/empty.png";
 
 export const DashboardPage = () => {
   const { client, isMobile, isLandscape } = useContext(ClientContext);
   const { modalOpen, setModalOpen, setModalAdd } = useContext(ContactContext);
-  console.log("mobile ", isMobile);
-  console.log("landscape ", isLandscape);
+
   return client ? (
     <StyledDashboard>
       {!isLandscape && !isMobile ? (
@@ -29,7 +28,7 @@ export const DashboardPage = () => {
               <div>
                 <h3 className="font-title-2">Sua Lista de Contatos</h3>
                 <Button
-                  size="plus"
+                  model="plus"
                   color="gray"
                   onClick={() => {
                     setModalAdd(true);

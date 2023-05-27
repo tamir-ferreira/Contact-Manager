@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
+import { AnimProp, ChildrenProp } from "../../interfaces";
 
-export const AnimBlur = ({ children }) => (
+export const AnimBlur = ({ children }: ChildrenProp) => (
   <motion.div
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
@@ -11,7 +12,7 @@ export const AnimBlur = ({ children }) => (
   </motion.div>
 );
 
-export const AnimZoom = ({ children }) => (
+export const AnimZoom = ({ children }: ChildrenProp) => (
   <motion.div
     animate={{
       scale: [0, 1],
@@ -24,7 +25,7 @@ export const AnimZoom = ({ children }) => (
   </motion.div>
 );
 
-export const AnimSlideLeft = ({ children, delay }) => (
+export const AnimSlideLeft = ({ children, delay }: AnimProp) => (
   <motion.div
     initial={{ translateX: "100vw" }}
     animate={{ translateX: 0 }}
@@ -34,7 +35,7 @@ export const AnimSlideLeft = ({ children, delay }) => (
   </motion.div>
 );
 
-export const AnimSlideRight = ({ children, delay }) => (
+export const AnimSlideRight = ({ children, delay }: AnimProp) => (
   <motion.div
     initial={{ translateX: "-100vw" }}
     animate={{ translateX: 0 }}
@@ -44,7 +45,7 @@ export const AnimSlideRight = ({ children, delay }) => (
   </motion.div>
 );
 
-export const AnimSlideDown = ({ children, delay }) => (
+export const AnimSlideDown = ({ children, delay }: AnimProp) => (
   <motion.div
     initial={{ translateY: "-150vh" }}
     animate={{ translateY: 0 }}
@@ -54,7 +55,7 @@ export const AnimSlideDown = ({ children, delay }) => (
   </motion.div>
 );
 
-export const AnimSlideUp = ({ children, delay }) => {
+export const AnimSlideUp = ({ children, delay }: AnimProp) => {
   const isMobileHorizontal = useMediaQuery({
     query: "(orientation: landscape)",
   });
@@ -74,7 +75,7 @@ export const AnimSlideUp = ({ children, delay }) => {
   );
 };
 
-export const AnimPump = ({ children }) => (
+export const AnimPump = ({ children }: ChildrenProp) => (
   <motion.div
     initial={{ opacity: 0, scale: 0.5 }}
     animate={{ opacity: 1, scale: 1 }}

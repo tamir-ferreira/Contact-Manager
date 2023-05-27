@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { RotateVariants } from "../../interfaces";
 
 const rotateVariant = {
   toLandscape: css`
@@ -6,7 +7,7 @@ const rotateVariant = {
   `,
 };
 
-export const StyledRotate = styled.div`
+export const StyledRotate = styled.div<RotateVariants>`
   height: 100vh;
   width: 100vw;
   display: flex;

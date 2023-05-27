@@ -24,9 +24,12 @@
     "yup": "^0.32.11"
   },
   "devDependencies": {
-    "@types/react": "^18.0.24",
-    "@types/react-dom": "^18.0.8",
+    "@types/node": "^20.2.5",
+    "@types/react": "^18.2.7",
+    "@types/react-dom": "^18.2.4",
+    "@types/styled-components": "^5.1.26",
     "@vitejs/plugin-react": "^2.2.0",
+    "typescript": "^5.0.4",
     "vite": "^3.2.3"
   }
 }
