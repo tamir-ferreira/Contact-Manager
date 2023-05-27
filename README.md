@@ -6,7 +6,6 @@
   - [2.1. Instalando Dependências](#21-instalando-dependências)
   - [2.2 Inicializando a aplicação](#22-inicializando-a-aplicação)
 - [3. Contatos](#3-contatos)
-  - [Dúvidas ou sugestões:](#dúvidas-ou-sugestões)
 
 ---
 
@@ -62,11 +61,11 @@ VITE ....
 
 [ Voltar para o topo ](#tabela-de-conteúdos)
 
-#### Dúvidas ou sugestões:
+Para informações de contato e conhecer um pouco mais sobre mim, acesse:
 
-Não deixe de entrar em contato!!
+| Portfólio | https://tamir-ferreira.vercel.app          |
+| --------- | :----------------------------------------- |
+| Linkedin  | https://www.linkedin.com/in/tamir-ferreira |
+| GitHub    | https://github.com/tamir-ferreira          |
 
-| E-mail | bigtam_rj@yahoo.com.br |
-| Linkedin | https://www.linkedin.com/in/tamir-ferreira/ |
-| GitHub | https://github.com/tamir-ferreira |
-| Portfólio | https://tamir-ferreira.vercel.app/ |
+---
