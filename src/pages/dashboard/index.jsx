@@ -1,5 +1,3 @@
-import empty from "../../images/empty.png";
-import { useMediaQuery } from "react-responsive";
 import { FaPlus } from "react-icons/fa";
 import { Button } from "../../components/Button";
 import { StyledDashboard } from "./styles";
@@ -11,22 +9,18 @@ import { Modal } from "../../components/Modal";
 import { ContactContext } from "../../context/ContactContext";
 import { ContactCard } from "../../components/ContactCard";
 import { AnimBlur } from "../../components/Animation";
-import rotate from "../../images/rotate.gif";
+import { Rotate } from "../../components/Rotate";
+import empty from "../../images/empty.png";
 
 export const DashboardPage = () => {
-  const { client } = useContext(ClientContext);
+  const { client, isMobile, isLandscape } = useContext(ClientContext);
   const { modalOpen, setModalOpen, setModalAdd } = useContext(ContactContext);
-  const isMobile = useMediaQuery({ maxWidth: 400 });
-  const isMobileHorizontal = useMediaQuery({
-    query: "(orientation: landscape)",
-  });
-
+  console.log("mobile ", isMobile);
+  console.log("landscape ", isLandscape);
   return client ? (
     <StyledDashboard>
-      {!isMobileHorizontal && isMobile ? (
-        <div className="rotate">
-          <img src={rotate} alt="gire a tela" />
-        </div>
+      {!isLandscape && !isMobile ? (
+        <Rotate width="toLandscape"></Rotate>
       ) : (
         <AnimBlur>
           <Header className="container" />
@@ -36,7 +30,7 @@ export const DashboardPage = () => {
                 <h3 className="font-title-2">Sua Lista de Contatos</h3>
                 <Button
                   size="plus"
-                  color="dark_gray"
+                  color="gray"
                   onClick={() => {
                     setModalAdd(true);
                     setModalOpen(true);

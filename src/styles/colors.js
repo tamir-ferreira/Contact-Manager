@@ -13,6 +13,7 @@ export const StyledColors = createGlobalStyle`
         --color-gray-4: #121214;
         --color-gray-5: #070708;
         --color-opacity: rgba(18, 18, 20, 0.90);
+        --color-black: #000000;
         
         --color-white: #FFFFFF;
         --color-success: #3FE864;

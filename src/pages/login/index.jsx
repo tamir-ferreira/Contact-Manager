@@ -1,3 +1,4 @@
+import { Rotate } from "../../components/Rotate";
 import { StyledLogin } from "./styles";
 import { Link } from "react-router-dom";
 import { FormLogin } from "../../components/Form/FormLogin";
@@ -6,7 +7,9 @@ import { useContext } from "react";
 import { ClientContext } from "../../context/ClientContext";
 
 export const LoginPage = () => {
-  const { setShowPass, waitClient } = useContext(ClientContext);
+  const { isMobile, isLandscape, setShowPass, waitClient } =
+    useContext(ClientContext);
+
   if (waitClient) {
     return (
       <div className="container-loader2">
@@ -16,25 +19,29 @@ export const LoginPage = () => {
   }
   return (
     <StyledLogin>
-      <main className="container">
-        <section>
-          <div>
-            <FormLogin />
-            <p className="font-headline-gray">
-              Descubra o equilíbrio perfeito entre funcionalidade e elegância,
-              uma organização eficiente e sofisticada.
-            </p>
-            <Link to={"/register"}>
-              <Button
-                size="default"
-                color="gray"
-                children="Cadastre-se"
-                onClick={() => setShowPass(false)}
-              />
-            </Link>
-          </div>
-        </section>
-      </main>
+      {isLandscape && !isMobile ? (
+        <Rotate />
+      ) : (
+        <main className="container">
+          <section>
+            <div>
+              <FormLogin />
+              <p className="font-headline-gray">
+                Descubra o equilíbrio perfeito entre funcionalidade e elegância,
+                uma organização eficiente e sofisticada.
+              </p>
+              <Link to={"/register"}>
+                <Button
+                  size="default"
+                  color="gray"
+                  children="Cadastre-se"
+                  onClick={() => setShowPass(false)}
+                />
+              </Link>
+            </div>
+          </section>
+        </main>
+      )}
     </StyledLogin>
   );
 };

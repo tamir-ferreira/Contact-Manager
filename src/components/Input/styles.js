@@ -10,7 +10,7 @@ export const StyledInput = styled.fieldset`
     margin: 15px 0 3px 0;
     font-size: var(--font-size-2);
     padding-left: 16px;
-    height: 48px;
+    height: 40px;
     outline: none;
     color: var(--color-gray-0);
     background-color: var(--color-gray-2);

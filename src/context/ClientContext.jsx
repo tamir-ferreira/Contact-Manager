@@ -1,10 +1,18 @@
 import { createContext, useEffect, useState } from "react";
 import { api, createClient, getClient, loginClient } from "../services/api";
+// import { Rotate } from "../../components/Rotate";
+import { useMediaQuery } from "react-responsive";
 import { useNavigate } from "react-router-dom";
 
 export const ClientContext = createContext({});
 
 export const ClientProvider = ({ children }) => {
+  // const isMobile = useMediaQuery({ maxWidth: 600 });
+  const isLandscape = useMediaQuery({
+    query: "(orientation: landscape)",
+  });
+  const isMobile = useMediaQuery({ query: "(pointer: fine)" });
+
   const [client, setClient] = useState(null);
   const [loading, setLoading] = useState(false);
   const [loading2, setLoading2] = useState(false);
@@ -74,6 +82,8 @@ export const ClientProvider = ({ children }) => {
   return (
     <ClientContext.Provider
       value={{
+        isMobile,
+        isLandscape,
         client,
         loading,
         loading2,

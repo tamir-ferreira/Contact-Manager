@@ -32,15 +32,15 @@ export const registerSchema = yup.object().shape({
     .string()
     .required("* campo obrigatório")
     .min(4, "* mínimo de 4 caracteres")
-    .max(120, "* máximo de 120 caracteres"),
-  /* .matches(/(?=.*?[A-Z])/, "* necessário pelo menos 1 letra minúscula")
+    .max(120, "* máximo de 120 caracteres")
+    /* .matches(/(?=.*?[A-Z])/, "* necessário pelo menos 1 letra minúscula")
     .matches(/(?=.*?[0-9])/, "* necessário pelo menos 1 número")
     .matches(
       /(?=.*?[#?!@$%^&*-])/,
       "* necessário pelo menos 1 caracter especial"
-    )
+    )*/
     .oneOf(
       [yup.ref("password"), null],
       "* necessário que as senhas sejam iguais"
-    ) */
+    ),
 });

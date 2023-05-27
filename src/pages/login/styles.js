@@ -32,7 +32,7 @@ export const StyledLogin = styled.div`
         max-width: 370px;
         display: flex;
         flex-direction: column;
-        padding: 25px;
+        padding: 15px 25px 30px 25px;
         align-items: center;
         background-color: var(--color-gray-3);
         color: var(--color-gray-0);
@@ -48,10 +48,9 @@ export const StyledLogin = styled.div`
         button {
           width: 100%;
         }
-
-        @media only screen and (max-width: 600px) {
-          margin: 12px;
-        }
+      }
+      @media only screen and (max-width: 600px) {
+        margin: 10px;
       }
     }
   }

@@ -4,7 +4,7 @@ export const Toast = () => {
   return (
     <div>
       <Toaster
-        position="top-right"
+        position="top-center"
         reverseOrder={false}
         toastOptions={{
           style: {

@@ -14,6 +14,7 @@ export const StyledTypography = createGlobalStyle`
     :root {
       --font-family-1: "Inter", sans-serif;
 
+      --font-size-0: 20px;
       --font-size-1: 18px;
       --font-size-2: 16px;
       --font-size-3: 14px;

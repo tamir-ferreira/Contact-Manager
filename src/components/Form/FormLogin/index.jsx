@@ -26,7 +26,7 @@ export const FormLogin = () => {
   return (
     <StyledForm onSubmit={handleSubmit(loginSubmit)} noValidate>
       <div>
-        <h2 className="font-title-1">Login</h2>
+        <h2 className="font-title-0">Login</h2>
       </div>
       <Input
         label="Email"

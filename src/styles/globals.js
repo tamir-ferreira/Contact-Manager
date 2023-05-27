@@ -15,9 +15,13 @@ export const StyledGlobals = createGlobalStyle`
 
   body {
     background-image: url(${bg});
-    background-size: fill;
-    max-width: 100vw;
-    overflow-x: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    
+    
   }
 
   ul {
@@ -34,21 +38,7 @@ export const StyledGlobals = createGlobalStyle`
     margin: 0 auto;
   }
 
-  .rotate{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    opacity: 0.7;
-    img{
-      width: 100vw;
-
-    }
-  }
-
-
-  /* -------- LOADER BOTÕES -------- */
+   /* -------- LOADER BOTÕES -------- */
   .loader {
   font-size: 4px;
   width: 1em;

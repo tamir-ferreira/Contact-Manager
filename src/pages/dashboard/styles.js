@@ -11,7 +11,7 @@ export const StyledDashboard = styled.div`
     position: fixed;
     display: flex;
     align-items: center;
-    height: 72px;
+    height: 70px;
     width: 100%;
 
     span {
@@ -46,6 +46,7 @@ export const StyledDashboard = styled.div`
     flex-direction: column;
     justify-content: space-between;
     background: var(--color-opacity);
+    height: 70vh;
 
     section:nth-child(1) {
       display: flex;
@@ -79,7 +80,7 @@ export const StyledDashboard = styled.div`
             color: var(--color-gray-1);
           }
           :hover {
-            background-color: var(--color-gray-5);
+            background-color: var(--color-primary-disable);
             h4 {
               color: var(--color-gray-0);
             }
@@ -100,6 +101,7 @@ export const StyledDashboard = styled.div`
       }
 
       > div:last-child {
+        margin-top: 40px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -124,57 +126,60 @@ export const StyledDashboard = styled.div`
     }
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) and (orientation: landscape) {
     header {
-      padding: 0 12px;
+      padding: 0 20px;
+      height: 60px;
       nav > div {
         width: 100%;
-        gap: 10px;
+        gap: 20px;
         justify-content: flex-end;
+      }
+      h1 {
+        font-size: 1.2em;
       }
     }
 
-    section {
-      padding: 0 12px;
-    }
-
-    section:nth-child(2) > div {
-      flex-direction: column;
-      justify-content: center;
-      gap: 10px;
-      align-items: flex-start;
-    }
-
-    section:nth-child(3) > ul {
-      padding: 23px 8.5px;
-    }
-  }
-
-  @media (orientation: landscape) {
-    header {
-      padding: 0 20px;
-    }
     main {
-      padding: 30px;
-      margin-top: 80px;
-      max-height: 75vh;
+      padding: 10px;
+      width: 95vw;
+      margin-top: 70px;
+      height: 80vh;
       position: relative;
       overflow: hidden;
+      > section {
+        margin-top: 40px;
+        overflow-y: auto;
+        padding: 0 12px;
+        /* padding-top: 25px; */
 
-      section {
-        margin-top: 30px;
-        overflow-y: scroll;
         > div {
-          padding: 0 30px;
+          padding: 0px 20px;
           width: 100%;
           position: absolute;
           left: 0;
-          top: 5px;
+          top: 10px;
         }
-        :nth-child(1) > ul {
-          width: 100%;
-          margin-top: 110px;
-          overflow-x: unset;
+        :nth-child(1) {
+          justify-content: flex-start;
+          > div:last-child > img {
+            padding: 0;
+            margin: 0;
+          }
+          > ul {
+            width: 100%;
+            overflow-x: unset;
+          }
+        }
+
+        :nth-child(2) > div {
+          flex-direction: column;
+          justify-content: center;
+          gap: 10px;
+          align-items: flex-start;
+        }
+        :nth-child(3) > ul {
+          padding: 23px 8.5px;
         }
       }
     }
