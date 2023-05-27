@@ -1,5 +1,4 @@
 import { createGlobalStyle } from "styled-components";
-// import bg from "../images/bg2.webp";
 import bg from "../images/bg2.png";
 
 export const StyledGlobals = createGlobalStyle`
