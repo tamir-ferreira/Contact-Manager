@@ -34,7 +34,8 @@ export const StyledLogin = styled.div`
         flex-direction: column;
         padding: 15px 25px 30px 25px;
         align-items: center;
-        background-color: var(--color-gray-3);
+        /* background-color: var(--color-gray-3); */
+        background: var(--color-opacity);
         color: var(--color-gray-0);
         border-radius: var(--border-radius-1);
 

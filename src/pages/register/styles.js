@@ -11,12 +11,13 @@ export const StyledRegister = styled.div`
 
   main {
     width: 100%;
-    opacity: 0.97;
+    opacity: 0.96;
     display: flex;
     flex-direction: column;
     padding: 70px 20px 30px 20px;
     border-radius: var(--border-radius-1);
-    background-color: var(--color-gray-3);
+    background: var(--color-opacity);
+    /* background-color: var(--color-gray-3); */
     color: var(--color-gray-0);
     position: relative;
 

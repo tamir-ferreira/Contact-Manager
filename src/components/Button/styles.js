@@ -66,8 +66,8 @@ const buttonVariants = {
   `,
 
   disabled: css`
-    background-color: var(--color-primary-disable);
-    border: 0.125rem solid var(--color-primary-disable);
+    background-color: var(--color-secondary);
+    border: 0.125rem solid var(--color-secondary);
     pointer-events: none;
   `,
 

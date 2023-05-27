@@ -1,5 +1,6 @@
 import { createGlobalStyle } from "styled-components";
-import bg from "../images/bg2.webp";
+// import bg from "../images/bg2.webp";
+import bg from "../images/bg2.png";
 
 export const StyledGlobals = createGlobalStyle`
   * {
@@ -16,6 +17,7 @@ export const StyledGlobals = createGlobalStyle`
   body {
     background-image: url(${bg});
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;

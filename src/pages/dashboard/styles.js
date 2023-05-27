@@ -6,7 +6,8 @@ export const StyledDashboard = styled.div`
   justify-content: center;
 
   header {
-    background-color: var(--color-gray-3);
+    /* background-color: var(--color-gray-3); */
+    background-color: var(--color-opacity);
     top: 0;
     position: fixed;
     display: flex;
@@ -47,6 +48,11 @@ export const StyledDashboard = styled.div`
     justify-content: space-between;
     background: var(--color-opacity);
     height: 70vh;
+    overflow: hidden;
+
+    section {
+      overflow-y: auto;
+    }
 
     section:nth-child(1) {
       display: flex;
@@ -68,7 +74,7 @@ export const StyledDashboard = styled.div`
         border-radius: var(--border-radius-1);
         background-color: var(--color-gray-3);
         padding: 10px;
-        > li {
+        li {
           padding: 10px 0 10px 25px;
           display: flex;
           min-width: 500px;
@@ -80,9 +86,11 @@ export const StyledDashboard = styled.div`
             color: var(--color-gray-1);
           }
           :hover {
-            background-color: var(--color-primary-disable);
-            h4 {
-              color: var(--color-gray-0);
+            :not(:first-child) {
+              background-color: var(--color-secondary);
+              h4 {
+                color: var(--color-gray-0);
+              }
             }
           }
           > div {
@@ -146,12 +154,10 @@ export const StyledDashboard = styled.div`
       margin-top: 70px;
       height: 80vh;
       position: relative;
-      overflow: hidden;
+
       > section {
         margin-top: 40px;
-        overflow-y: auto;
         padding: 0 12px;
-        /* padding-top: 25px; */
 
         > div {
           padding: 0px 20px;
