@@ -66,7 +66,7 @@ VITE ....
 
 Não deixe de entrar em contato!!
 
-E-mail: bigtam_rj@yahoo.com.br
-Linkedin: https://www.linkedin.com/in/tamir-ferreira/
-GitHub: https://github.com/tamir-ferreira
-Portfólio: https://tamir-ferreira.vercel.app/
+| E-mail | bigtam_rj@yahoo.com.br |
+| Linkedin | https://www.linkedin.com/in/tamir-ferreira/ |
+| GitHub | https://github.com/tamir-ferreira |
+| Portfólio | https://tamir-ferreira.vercel.app/ |
