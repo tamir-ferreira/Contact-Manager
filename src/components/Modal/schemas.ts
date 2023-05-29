@@ -7,7 +7,7 @@ export const modalSchemaCreate = yup.object().shape({
     .max(45, "* máximo de 45 caracteres"),
   email: yup
     .string()
-    .email()
+    .email("* endereço de e-mail inválido")
     .required("* campo obrigatório")
     .max(45, "* máximo de 45 caracteres"),
   telephone: yup
